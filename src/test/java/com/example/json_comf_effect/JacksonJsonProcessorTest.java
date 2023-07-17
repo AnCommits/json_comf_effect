@@ -41,7 +41,7 @@ class JacksonJsonProcessorTest {
     @Test
     void getUserName() throws IOException {
         String json = Files.readString(Paths.get("src/main/resources/sample.json"));
-        User user = processor.fromJson(json);
-        assertEquals("Peter", user.getName());
+        String name = processor.getUserName(json);
+        assertEquals("Peter", name);
     }
 }
